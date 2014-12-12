@@ -19,7 +19,7 @@ cd ..
 #git clone https://github.com/jyucsiro/sissvoc.git
 curl -L -O https://github.com/jyucsiro/sissvoc/archive/sissvoc-vanilla-v0.2.zip
 unzip sissvoc-vanilla-v0.2.zip
-mv sissvoc-sissvoc-vanilla-v0.2 sissvoc
+mv sissvoc-sissvoc-vanilla-v0.2 sissvoc-vanilla
 # remove the redundant cd sissvoc and cd .. (no point)
 
 #remove the -c from the line below (was not exucuting when run in the linux environment)
