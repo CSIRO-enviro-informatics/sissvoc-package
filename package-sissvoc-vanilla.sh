@@ -7,10 +7,11 @@ set -x #echo on
 #git checkout tags/elda-1.2.35
 #mvn package
 #cd ..
-#WORKAROUND FIX - download elda 1.2.35 release and unzip
-curl -L -O https://github.com/epimorphics/elda/archive/elda-1.2.35.zip
-unzip elda-1.2.35.zip
-mv elda-elda-1.2.35 elda
+#WORKAROUND FIX - download elda 1.3.1 release and unzip
+#This version contains velocity templates which we will use for UI improvements 
+curl -L -O https://github.com/epimorphics/elda/archive/elda-1.3.1.zip
+unzip elda-1.3.1.zip
+mv elda-elda-1.3.1 elda
 cd elda
 mvn package
 cd ..
@@ -20,8 +21,6 @@ cd ..
 curl -L -O https://github.com/jyucsiro/sissvoc/archive/sissvoc-vanilla-v0.2.zip
 unzip sissvoc-vanilla-v0.2.zip
 mv sissvoc-sissvoc-vanilla-v0.2 sissvoc-vanilla
-# remove the redundant cd sissvoc and cd .. (no point)
-
 #remove the -c from the line below (was not exucuting when run in the linux environment)
 bash package-sissvoc-vanilla--no-build.sh
 
