@@ -4,14 +4,14 @@ set -x #echo on
 #clone and build elda - for some reason in windows, mvn doesn't want to build elda from the git repo tag. 
 #git clone https://github.com/epimorphics/elda.git
 #cd elda
-#git checkout tags/elda-1.2.35
+#git checkout tags/elda-1.3.4
 #mvn package
 #cd ..
-#WORKAROUND FIX - download elda 1.3.1 release and unzip
+#WORKAROUND FIX - download elda 1.3.4 release and unzip
 #This version contains velocity templates which we will use for UI improvements 
-curl -L -O https://github.com/epimorphics/elda/archive/elda-1.3.1.zip
-unzip elda-1.3.1.zip
-mv elda-elda-1.3.1 elda
+curl -L -O https://github.com/epimorphics/elda/archive/elda-1.3.4.zip
+unzip elda-1.3.4.zip
+mv elda-elda-1.3.4 elda
 cd elda
 mvn package
 cd ..
