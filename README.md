@@ -1,12 +1,21 @@
 SISSVoc-package ![alt text](http://i.imgur.com/llD3KFb.jpg "CSIRO")
 ===============
 
-Packaging scripts for sissvoc.The packaging script currently targets a vanilla release of SISSVoc and ELDA 1.3.4.
+Packaging scripts for sissvoc. This package includes docker scripts for streamlined deployment of SISSVoc. The packaging script currently targets a vanilla release of SISSVoc and ELDA 1.3.4.
+
+Pre-requisite:
+--------------
+- Docker v1.4+
+- Linux OS
 
 See: 
 - https://github.com/jyucsiro/sissvoc
 - https://github.com/SISS/sissvoc
 - https://github.com/epimorphics/elda
+
+[![Youtube tutorial](http://img.youtube.com/vi/ryfWCA0JNY0/0.jpg)](http://www.youtube.com/watch?v=ryfWCA0JNY0)
+
+
 
 # What is SISSVoc used for?
 
