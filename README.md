@@ -40,11 +40,26 @@ Linux Quick-start
 -----------------
 
 #### Pre-requisites:
-* docker 
+* docker v1.4+
 
 #### Steps:
-1. docker build -t sissvoc .
-2. docker run -P -d sissvoc 
-3. docker ps (find port mapped to 8080)
-3. navigate to localhost:[mapped port]/sissvoc/meta/api
+    #building and deploying sissvoc
+    $ git clone https://github.com/CSIRO-enviro-informatics/sissvoc-package.git
+    $ cd sissvoc-package/
+    $ git checkout docker
+    $ sudo ./build.sh 
+    $ sudo docker images | head
+    $ sudo ./run.sh 
+    $ sudo docker ps
+    # find port mapped to 8080
+    # in web browser, navigate to localhost:[mapped port]/sissvoc/meta/api
+
+    #adding a new SISSVoc config
+    $ cd configs/
+    $ cp default-config.properties isc.properties
+    $ vim isc.properties 
+    $ cd ..
+    $ sudo ./build.sh
+    $ sudo ./run.sh 
+    $ sudo docker ps
 
