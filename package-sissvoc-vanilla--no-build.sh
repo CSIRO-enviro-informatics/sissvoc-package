@@ -25,5 +25,6 @@ cp -rf ../sissvoc-vanilla/resources/ ../sissvoc-vanilla/default-landing/ .
 rm resources/default/config/*
 cp ../sissvoc-vanilla/build/sissvoc-configs/*.ttl resources/default/config
 sed -i "s/<param-value>\/etc\/elda\/conf.d\/{APP}\/\*.ttl<\/param-value>/<param-value>resources\/default\/config\/\*.ttl<\/param-value>/g" WEB-INF/web.xml
+cp -r ../web/* .
 jar -cvf sissvoc.war *
 mv sissvoc.war ..
