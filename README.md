@@ -1,12 +1,21 @@
 SISSVoc-package ![alt text](http://i.imgur.com/llD3KFb.jpg "CSIRO")
 ===============
 
-Packaging scripts for sissvoc.The packaging script currently targets a vanilla release of SISSVoc and ELDA 1.3.4.
+Packaging scripts for sissvoc. This package includes docker scripts for streamlined deployment of SISSVoc. The packaging script currently targets a vanilla release of SISSVoc and ELDA 1.3.4.
+
+Pre-requisite:
+--------------
+- Docker v1.4+
+- Linux OS
 
 See: 
 - https://github.com/jyucsiro/sissvoc
 - https://github.com/SISS/sissvoc
 - https://github.com/epimorphics/elda
+
+[![Youtube tutorial](http://img.youtube.com/vi/ryfWCA0JNY0/0.jpg)](http://www.youtube.com/watch?v=ryfWCA0JNY0)
+
+
 
 # What is SISSVoc used for?
 
@@ -31,11 +40,26 @@ Linux Quick-start
 -----------------
 
 #### Pre-requisites:
-* docker 
+* docker v1.4+
 
 #### Steps:
-1. docker build -t sissvoc .
-2. docker run -P -d sissvoc 
-3. docker ps (find port mapped to 8080)
-3. navigate to localhost:[mapped port]/sissvoc/meta/api
+    #building and deploying sissvoc
+    $ git clone https://github.com/CSIRO-enviro-informatics/sissvoc-package.git
+    $ cd sissvoc-package/
+    $ git checkout docker
+    $ sudo ./build.sh 
+    $ sudo docker images | head
+    $ sudo ./run.sh 
+    $ sudo docker ps
+    # find port mapped to 8080
+    # in web browser, navigate to localhost:[mapped port]/sissvoc/meta/api
+
+    #adding a new SISSVoc config
+    $ cd configs/
+    $ cp default-config.properties isc.properties
+    $ vim isc.properties 
+    $ cd ..
+    $ sudo ./build.sh
+    $ sudo ./run.sh 
+    $ sudo docker ps
 
