@@ -43,7 +43,7 @@ Linux Quick-start
 * openjdk-7
 
 #### Steps:
-1. Unzip `sissvoc-package-master.zip` 
+1. Download and unzip `sissvoc-package-master.zip` 
    * Use unzip command from command line: `unzip sissvoc-package-master.zip` when in the correct directory or unzip from file explorer.
 2. Navigate to the `sissvoc-package` repo directory.
    * Navigate through the command line: `cd sissvoc-package-master/` if you just used the unzip command, until you are in the extracted file.
@@ -60,7 +60,7 @@ Windows Quick-start
 
 #### Pre-requisites
 * Git for Windows (recommend 1.9+ ; [download here](http://git-scm.com/download/win))
-* Maven (recommend 3.2+; [download here](http://maven.apache.org/download.cgi))
+* Maven (recommend 3.2+; [download here](http://maven.apache.org/download.cgi)) Download the latest bin Zip file
 * JDK 1.7+ (recommend [Sun JDK](see http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html))
 * python 2.7+
 
@@ -78,12 +78,13 @@ Windows Quick-start
 4. The steps to ensure JAVA_HOME is defined as a Windows environment variable and pointed to the JDK dir are very similar. All that is different is that you may have to create a new environmental variable name "JAVA_HOME" and for the variable value add in the location of the JDK dir (e.g `C:\Program Files\Java\jdk1.8.0_25\`).
 
 #### Steps:
-1. Navigate to the `sissvoc-package` repo directory.
+1. Download and extract the sissvoc-package-master.zip
+2. Navigate to the `sissvoc-package` repo directory. (The unzipped file location)
   * Using the `cmd` (access by win key + r and enter cmd, click enter) use `cd **location of your file** \sissvoc-package-master`  ![alt text](http://i.imgur.com/XDJ8ZmK.png "an example")
-2. Execute `package-sissvoc-vanilla.bat` 
+3. Execute `package-sissvoc-vanilla.bat` 
   * Click tab until `package-sissvoc-vanilla.bat` is displayed and click enter.
   * It will take some time and if successful will display this:![alt text](http://i.imgur.com/dRpO9SW.png "success")
-3. This should produce and package up sissvoc into `sissvoc.war` which you can deploy in an Application Server such as Tomcat7.
+4. This should produce and package up sissvoc into `sissvoc.war` which you can deploy in an Application Server such as Tomcat7. You can also run it locally via jetty-runner (Instructions can be found below).
 
 
 Running sissvoc via jetty-runner
@@ -100,7 +101,7 @@ Linux
 ```
    $ java -jar jar/jetty-runner.jar --path /sissvoc sissvoc.war
 ```   
-Windows (for convenience we've written sissvoc-runner.bat)
+Windows (for convenience we've written sissvoc-runner.bat, run this in the command prompt (cmd))
 ```
    $ java -jar jar\jetty-runner.jar --path /sissvoc sissvoc.war
 ```   
